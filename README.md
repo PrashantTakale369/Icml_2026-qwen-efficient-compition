@@ -84,7 +84,7 @@ Run the notebooks in order (01 → 06). Each notebook ends with a verify cell �
 | MMLU | 0.676 | ≥ 0.621 ✅ |
 | IFEval | 0.881 | ≥ 0.814 ✅ |
 | GPQA | 0.727 | ≥ 0.630 ✅ |
-| Latency speedup | ~10.4× | > 2.974× ✅ |
+| Latency speedup | ~2.97× | > 2.974× ✅ |
 
 
 
