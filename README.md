@@ -45,16 +45,7 @@ Enable vLLM's prefix caching (`--enable-prefix-caching`). The benchmark includes
 ├── 04_gdn_int8.ipynb            # Step 4: Quantize GDN linear_attn layers to INT8
 ├── 05_strip_vision.ipynb        # Step 5: Strip vision encoder weights + clean config
 ├── 06_serve_and_test.ipynb      # Step 6: Build Docker image, run, smoke test
-│
-├── 1_build_model.py             # Production script: Steps 1-4 combined (builds final-combo weights)
-├── 1b_strip_vision.py           # Production script: Step 5 (strip vision weights)
-├── 2_serve.py                   # FastAPI serve wrapper (MTP spec-decode, prefix cache, vision-off)
-├── 3_prune_fp16.py              # Structured pruning: drop 2 lowest-importance GDN layers
-├── 3_prune1_fp16.py             # Structured pruning: drop 1 lowest-importance GDN layer
-│
-├── shim/
-│   └── sitecustomize.py         # Vision removal shim: monkeypatches vLLM at startup
-│
+|
 └── Dockerfile                   # Container: pins vLLM 0.19.0, bakes runtime env vars
 ```
 
@@ -75,7 +66,7 @@ Run the notebooks in order (01 → 06). Each notebook ends with a verify cell �
 
 **Requirements:**
 - Single NVIDIA A10G GPU (sm86)
-- vLLM 0.19.0 (do NOT upgrade — base image is pinned; newer versions break on this CUDA driver)
+- vLLM 0.19.0 
 - `llmcompressor`, `compressed-tensors`, `safetensors`, `torch`, `fastapi`, `uvicorn`, `httpx`
 
 ---
