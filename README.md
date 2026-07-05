@@ -2,7 +2,7 @@
 
 **Challenge:** Minimize inference latency for Qwen3.5-4B on a single NVIDIA A10G GPU while preserving model quality.
 
-**Our result: Rank #20 out of 550+ submissions worldwide.**
+**Our result: Rank #20 out of 550+ submissions worldwide.** </n>
 **Medium Blog ** : https://medium.com/@prashantcp876/icml26-efficient-qwen-competition-accelerated-2-97x-qwen3-5-4b-55443a9fbf47
 
 <img width="1400" height="915" alt="image" src="https://github.com/user-attachments/assets/425c7a74-dbf2-4dbd-bcac-2672108613f2" />
