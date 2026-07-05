@@ -1,11 +1,16 @@
-# ICML 2026 — The Efficient Qwen Competition
+# ICML 2026 :  The Efficient Qwen Competition
 
 **Challenge:** Minimize inference latency for Qwen3.5-4B on a single NVIDIA A10G GPU while preserving model quality.
 
 **Our result: Rank #20 out of 550+ submissions worldwide.**
 **Medium Blog ** : https://medium.com/@prashantcp876/icml26-efficient-qwen-competition-accelerated-2-97x-qwen3-5-4b-55443a9fbf47
 
+<img width="1400" height="915" alt="image" src="https://github.com/user-attachments/assets/425c7a74-dbf2-4dbd-bcac-2672108613f2" />
+
 The competition pushed participants to explore every layer of the inference stack — quantization, pruning, speculative decoding, and kernel-level optimizations. This repo contains our complete solution: all scripts, notebooks, and the serving stack exactly as submitted.
+
+<img width="1400" height="747" alt="image" src="https://github.com/user-attachments/assets/8d304e25-3163-41e4-b9c8-aa0535c41c47" />
+
 
 ---
 
@@ -80,4 +85,6 @@ Run the notebooks in order (01 → 06). Each notebook ends with a verify cell �
 | IFEval | 0.881 | ≥ 0.814 ✅ |
 | GPQA | 0.727 | ≥ 0.630 ✅ |
 | Latency speedup | ~10.4× | > 2.974× ✅ |
+
+
 
