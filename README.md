@@ -18,6 +18,9 @@ The competition pushed participants to explore every layer of the inference stac
 
 The core insight was that **Qwen3.5-4B is memory-bandwidth bound at decode time**. Cutting the amount of data the GPU has to move per token is the fastest path to latency wins. We stacked 7 complementary techniques, each validated independently before combining.
 
+<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/05528acd-646c-4d24-b670-74ead89b4567" />
+
+
 ### 1. W8A16 Main Body Quantization
 We quantize all main transformer Linear layers to INT8 weights with FP16 activations (W8A16) using GPTQ with Hessian-aware calibration on UltraChat. This halves the memory footprint of every weight matrix, which directly halves the memory bandwidth consumed per decode step — the primary bottleneck. Quality loss is near-zero because GPTQ minimizes the layer-wise output error, not just the weight error.
 
